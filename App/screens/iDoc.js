@@ -1,16 +1,20 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet, View } from 'react-native'
-
-
+import { StyleSheet, View } from 'react-native'
+import { Block, Text } from "../components";
+import * as theme from "../config/theme";
 
 export default class IDoc extends Component {
     render() {
         return (
-            <View>
-                <Text>Hello</Text>
-            </View>
-        )
+            <Block center middle color="white" style={styles.container}>
+                <Text h1 bold>iBlood</Text>
+            </Block>
+        );
     }
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    container: {
+        // backgroundColor: theme.colors.primary,
+    },
+})
