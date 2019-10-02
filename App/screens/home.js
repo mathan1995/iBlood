@@ -22,7 +22,7 @@ export default class Home extends Component {
                         onPress={() =>
                             this.props.navigation.navigate('IDoc')}
                     >
-                        <Text>Gradient</Text>
+                        <Text>iDoc</Text>
                     </TouchableOpacity>
                 </View>
 

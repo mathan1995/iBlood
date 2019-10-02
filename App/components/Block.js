@@ -3,7 +3,18 @@ import { Text, StyleSheet, View } from 'react-native'
 import * as theme from "../config/theme"
 export default class Block extends Component {
     render() {
-        const { flex, row, column, center, middle, color, style, children, ...props } = this.props;
+        const { flex,
+            row,
+            column,
+            center,
+            middle,
+            color,
+            style,
+            card,
+            space,
+            shadow,
+            children,
+            ...props } = this.props;
         const blockStyles = [
             styles.block,
             flex && { flex },
@@ -12,6 +23,9 @@ export default class Block extends Component {
             column && styles.column,
             center && styles.center,
             middle && styles.middle,
+            card && styles.card,
+            space && { justifyContent: 'space-between' },
+            shadow && styles.shadow,
             color && styles[color], //predefined  styles colors for backgroundColor
             color && !styles[color] && { backgroundColor: color }, //Custom Background Color
             style, //Rewrite every predefined styles...
@@ -45,6 +59,9 @@ const styles = StyleSheet.create({
     },
     shadow: {
         shadowColor: theme.colors.black,
+        shadowOffset: { width: 0, height: 0 },
+        shadowOpacity: 0.1,
+        shadowRadius: 10
     },
     accent: { backgroundColor: theme.colors.accent },
     primary: { backgroundColor: theme.colors.primary },
