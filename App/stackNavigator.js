@@ -13,10 +13,11 @@ const MainNavigator = createStackNavigator(
         initialRouteName: 'Home',
         defaultNavigationOptions: {
             title: '',
+
         }
     }
-)
 
+)
 
 const App = createAppContainer(MainNavigator);
 export default App;

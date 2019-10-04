@@ -44,7 +44,7 @@ const requests = [
 const chart = [];
 
 const user = {
-
+    avatar: require('../assets/profile.jpg'),
 };
 
 
